@@ -4969,7 +4969,7 @@ public class ArrayUtils {
         return !isEmpty(array);
     }
 
-    /**
+/**
      * <p>Adds all the elements of the given arrays into a new array.</p>
      * <p>The new array contains all of the element of {@code array1} followed
      * by all of the elements {@code array2}. When an array is returned, it is always
@@ -4984,7 +4984,8 @@ public class ArrayUtils {
      * ArrayUtils.addAll(["a", "b", "c"], ["1", "2", "3"]) = ["a", "b", "c", "1", "2", "3"]
      * </pre>
      *
-     * @param <T> the component type of the array
+     * @param <T> the component type of the first array
+     * @param <E> the component type of the second array
      * @param array1  the first array whose elements are added to the new array, may be {@code null}
      * @param array2  the second array whose elements are added to the new array, may be {@code null}
      * @return The new array, {@code null} if both arrays are {@code null}.
@@ -4993,7 +4994,7 @@ public class ArrayUtils {
      * @since 2.1
      * @throws IllegalArgumentException if the array types are incompatible
      */
-    public static <T> T[] addAll(final T[] array1, final T... array2) {
+	public static <T, E extends T> T[] addAll(T[] array1, E... array2) {
         if (array1 == null) {
             return clone(array2);
         } else if (array2 == null) {
