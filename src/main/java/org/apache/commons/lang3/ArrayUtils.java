@@ -4994,7 +4994,7 @@ public class ArrayUtils {
      * @since 2.1
      * @throws IllegalArgumentException if the array types are incompatible
      */
-	public static <T, E extends T> T[] addAll(T[] array1, E... array2) {
+    public static <T, E extends T> T[] addAll(T[] array1, E... array2) {
         if (array1 == null) {
             return clone(array2);
         } else if (array2 == null) {
